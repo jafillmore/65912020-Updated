@@ -145,7 +145,7 @@ public class ShooterSubsystem extends SubsystemBase {
 
   ////////////////////   Rotate the Shooter   /////////////////////////////////  
   public void rotate(double chubby) {
-    targetMotor.set(0.2*chubby);
+    targetMotor.set(ShooterConst.targetMotorManualRotateSpeed*chubby);
   }
 
   ///////////////////   Auto Target the Shooter   //////////////////////////////

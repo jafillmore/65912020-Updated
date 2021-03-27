@@ -152,7 +152,7 @@ public class RobotContainer {
 
     // Default Command for rotating the shooter   
     shooterSubsystem.setDefaultCommand(
-      new RunCommand(() -> shooterSubsystem .rotate(joeStick.getRawAxis(2)), shooterSubsystem));
+      new RunCommand(() -> shooterSubsystem .rotate(joeStick.getRawAxis(0)), shooterSubsystem));
 
     // Show the shooter motor speed on the Driver Station
     Shuffleboard.getTab("Actual Shooter RPM").add("rpm", shooterSubsystem.encoder.getVelocity());

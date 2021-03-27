@@ -70,6 +70,7 @@ public final class DriveConst {
     public static final int midLeftMotor = 5;
     public static final int frontRightMotor = 1;
     public static final int midRightMotor = 2;
+    public static final double turnSpeed = .5;
 
 }
 
@@ -153,6 +154,7 @@ public static final class PnemuaticConst{
     public static final double primeMotorShootSpeed = 1.0;
 
     public static final double targetMotorAutoRotateSpeed =.2;
+    public static final double targetMotorManualRotateSpeed =.3;
     
     //Motor CAN IDs
     public static final int Shooter = 8;

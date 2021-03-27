@@ -7,8 +7,9 @@
 
 package frc.robot.subsystems;
 
-import com.revrobotics.*;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType; 
+import com.revrobotics.CANEncoder;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
@@ -46,7 +47,7 @@ public class ArcadeDriveSubsystem extends SubsystemBase {
   //public Joystick mainJoystick = new Joystick(0);
 
   public void arcadeDrive(double fwd, double rot) {
-  robotdrive.arcadeDrive(-fwd, rot);
+  robotdrive.arcadeDrive(-fwd, rot*Math.abs(rot));  /**DriveConst.turnSpeed*/
   }
 
   public void resetEncoders(){
@@ -70,7 +71,7 @@ public class ArcadeDriveSubsystem extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    robotdrive.setDeadband(0.06);
+    robotdrive.setDeadband(0.02);
   }
 
   
